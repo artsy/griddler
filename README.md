@@ -1,3 +1,5 @@
+**Note**: Artsy's fork of Griddler is to address a regex performance problem, [fixed here](https://github.com/thoughtbot/griddler/pull/310), until the PR is merged.
+
 Griddler
 ========
 
