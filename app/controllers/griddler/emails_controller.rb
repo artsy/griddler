@@ -2,11 +2,11 @@ class Griddler::EmailsController < ActionController::Base
   skip_before_action :verify_authenticity_token, raise: false
 
   def create
-    Rails.logger.info "[INCIDENT62] Started Processing #{time.now}"
+    Rails.logger.info "[INCIDENT62] Started Processing #{Time.now}"
     normalized_params.each do |p|
       process_email email_class.new(p)
     end
-    Rails.logger.info "[INCIDENT62] Completed Processing #{time.now}"
+    Rails.logger.info "[INCIDENT62] Completed Processing #{Time.now}"
 
     head :ok
   end

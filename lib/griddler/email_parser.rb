@@ -25,7 +25,7 @@ module Griddler::EmailParser
   end
 
   def self.extract_reply_body(body)
-    Rails.logger.info "[INCIDENT62] Started Extracting #{time.now}"
+    Rails.logger.info "[INCIDENT62] Started Extracting #{Time.now}"
     if body.blank?
       ""
     else
@@ -38,7 +38,7 @@ module Griddler::EmailParser
         join("\n").
         strip
     end
-    Rails.logger.info "[INCIDENT62] Completed Extracting #{time.now}"
+    Rails.logger.info "[INCIDENT62] Completed Extracting #{Time.now}"
   end
 
   def self.extract_headers(raw_headers)
